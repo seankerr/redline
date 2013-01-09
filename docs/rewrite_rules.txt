@@ -1,0 +1,21 @@
+# ------------------------------------------------------------------------------
+# APACHE REWRITE EXAMPLES
+# ------------------------------------------------------------------------------
+# Note: No matter what directory you place index.php for routing, the config.xml
+#       rules always are based off of that directory, and you never have to do
+#       something like this:
+#
+#       WRONG:
+#       <route pattern="^/subdir/module">
+#
+#       RIGHT:
+#       <route pattern="^/module">
+#
+#       The reason this is, is because Redline reads PATH_INFO, which is always
+#       relative to index.php.
+# ------------------------------------------------------------------------------
+
+RewriteEngine On
+
+RewriteCond %{REQUEST_URI} "!^(index\.php\?__rlquery|css|images|js)"
+RewriteRule "^/(.*)"       "index.php?__rlquery=/$1&%1" [QSA,L]

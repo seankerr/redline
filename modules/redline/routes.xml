@@ -1,0 +1,6 @@
+<routes>
+    <route pattern="^/?$"          action="redline/index"/>
+    <route pattern="^/components$" action="redline/components"/>
+    <route pattern="^/error$"      action="redline/error"/>
+    <route pattern="^.*$"          action="redline/page_not_found"/>
+</routes>

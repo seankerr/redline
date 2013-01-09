@@ -1,0 +1,40 @@
+<config>
+
+    <defines>
+        <!-- urls -->
+        <define name="RL_ERROR_URL">/redline/error</define>
+        <define name="RL_PAGE_NOT_FOUND_URL">/redline/page-not-found</define>
+
+        <!-- error handling -->
+        <define name="RL_DATE_FORMAT">Y-m-d H:i:s</define>
+        <define name="RL_DISPLAY_ERRORS">1</define>
+        <define name="RL_LOG_FILE"></define>
+        <define name="RL_TIMEZONE">America/New_York</define>
+
+        <!-- misc settings -->
+        <define name="RL_REQUEST_CLASS">RLRequest</define>
+        <define name="RL_USE_SESSIONS">1</define>
+
+        <!-- default error messages for form validation -->
+        <define name="RL_FILE_INVALID">Upload failed</define>
+        <define name="RL_FILE_REQUIRED">Please select a file</define>
+        <define name="RL_INPUT_INVALID">Invalid entry</define>
+        <define name="RL_INPUT_REQUIRED">Please fill this in</define>
+        <define name="RL_SELECT_INVALID">Invalid selection</define>
+        <define name="RL_SELECT_REQUIRED">Please make a selection</define>
+
+        <!-- default select box options -->
+        <define name="RL_SELECT_ANY">-Any-</define>
+        <define name="RL_SELECT_CHOOSE">-Choose-</define>
+    </defines>
+
+    <includes>
+        <!-- <include file=""/> -->
+    </includes>
+
+    <routes>
+        <route pattern="^/redline" include="{RL_MODULE_DIR}/redline/routes.xml"/>
+        <!--<route pattern="^/subdir" action="module_name/action"/>-->
+    </routes>
+
+</config>
